@@ -1,153 +1,220 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>IPTV Subscription</title>
+  <title>Premium IPTV Service</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premium IPTV service with live TV, movies, sports and 24/7 support. Free trial available.">
+  <meta name="keywords" content="IPTV, IPTV subscription, live TV, sports IPTV, movies IPTV">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
   <style>
     body {
-      margin: 0;
-      font-family: Arial;
-      background: #0f172a;
-      color: white;
+      margin:0;
+      font-family:Roboto;
+      background:#0b1220;
+      color:white;
+      overflow-x:hidden;
     }
 
+    /* HEADER */
+    .header {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 20px;
+      background:#111827;
+      position:sticky;
+      top:0;
+    }
+
+    .logo {
+      font-size:20px;
+      font-weight:bold;
+      color:#22c55e;
+    }
+
+    /* SLIDER */
+    .slider {
+      height:300px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .slide {
+      position:absolute;
+      width:100%;
+      height:100%;
+      background-size:cover;
+      background-position:center;
+      animation:fade 12s infinite;
+    }
+
+    .slide:nth-child(1){background-image:url('https://images.unsplash.com/photo-1526401485004-2aa6f3d1b18f');}
+    .slide:nth-child(2){background-image:url('https://images.unsplash.com/photo-1580894894513-541e068a3e2b');animation-delay:4s;}
+    .slide:nth-child(3){background-image:url('https://images.unsplash.com/photo-1511512578047-dfb367046420');animation-delay:8s;}
+
+    @keyframes fade {
+      0%{opacity:0}
+      10%{opacity:1}
+      30%{opacity:1}
+      40%{opacity:0}
+      100%{opacity:0}
+    }
+
+    /* CONTAINER */
     .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
+      max-width:1000px;
+      margin:auto;
+      padding:20px;
     }
 
-    h1 { color: #22c55e; text-align:center; }
+    h1 {
+      text-align:center;
+      color:#22c55e;
+      font-size:40px;
+    }
 
     .box {
-      background: #111827;
-      padding: 20px;
-      border-radius: 12px;
-      margin: 15px 0;
+      background:#111827;
+      padding:20px;
+      margin:15px 0;
+      border-radius:12px;
+      transition:0.3s;
+    }
+
+    .box:hover {
+      transform:scale(1.02);
     }
 
     .btn {
       display:inline-block;
       padding:12px 20px;
-      background:#22c55e;
+      background:#25D366;
       color:white;
       text-decoration:none;
       border-radius:8px;
+      font-weight:bold;
       margin-top:10px;
     }
 
-    .price-grid {
+    .grid {
       display:grid;
-      grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+      grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
       gap:10px;
     }
 
-    .price {
+    .card {
       background:#1f2937;
       padding:15px;
       border-radius:10px;
       text-align:center;
+      transition:0.3s;
     }
 
-    .faq h3 { color:#22c55e; }
+    .card:hover {
+      background:#22c55e;
+      color:black;
+      transform:translateY(-5px);
+    }
+
+    /* WHATSAPP FLOAT */
+    .whatsapp {
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25D366;
+      padding:15px;
+      border-radius:50%;
+      font-size:20px;
+    }
+
   </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+<div class="header">
+  <div class="logo">IPTV PRO</div>
+  <a class="btn" href="https://wa.me/61422116424?text=I want IPTV details">Contact</a>
+</div>
+
+<!-- SLIDER -->
+<div class="slider">
+  <div class="slide"></div>
+  <div class="slide"></div>
+  <div class="slide"></div>
+</div>
+
 <div class="container">
 
-<h1>Premium IPTV Subscription</h1>
+<h1>Premium IPTV Service</h1>
 
 <!-- HERO -->
 <div class="box">
   <p>
-    Premium IPTV service for Firestick, Smart TV, Android, iOS & more.
-    Enjoy worldwide entertainment in HD & 4K.
+    High-quality IPTV service for Firestick, Smart TV, Android, iOS & more.
+    Enjoy stable servers, HD/4K streaming and instant activation.
   </p>
-
-  <a class="btn" href="https://wa.me/61422116424?text=I want IPTV subscription">
-    Contact on WhatsApp
-  </a>
 </div>
 
-<!-- TRIAL SECTION -->
+<!-- FREE TRIAL -->
 <div class="box">
   <h2>🎁 Free Trial</h2>
-  <p>We offer a <b>24 Hours Free Trial</b> so you can test quality before buying.</p>
-  <a class="btn" href="https://wa.me/61422116424?text=I want free IPTV trial">
-    Get Free Trial
-  </a>
+  <p>24 Hours Free Trial available before purchase.</p>
+  <a class="btn" href="https://wa.me/61422116424?text=I want free trial">Get Trial</a>
 </div>
 
 <!-- FEATURES -->
 <div class="box">
   <h2>🔥 Features</h2>
-  <p>✔ Live TV Channels Worldwide</p>
-  <p>✔ Movies & Series Library</p>
-  <p>✔ Sports & Football Events</p>
-  <p>✔ PPV Events</p>
-  <p>✔ Multi Device Support</p>
-  <p>✔ HD / 4K Quality</p>
+  <p>✔ Live TV Worldwide</p>
+  <p>✔ Movies & Series</p>
+  <p>✔ Sports & PPV Events</p>
+  <p>✔ Multi-device support</p>
+  <p>✔ HD / 4K quality</p>
 </div>
 
 <!-- PRICING -->
 <div class="box">
-  <h2>💰 Pricing Plans</h2>
+  <h2>💰 Pricing</h2>
 
-  <div class="price-grid">
-    <div class="price">3 Months<br>$25</div>
-    <div class="price">6 Months<br>$45</div>
-    <div class="price">1 Year<br>$80</div>
-    <div class="price">2 Years<br>$140</div>
-    <div class="price">3 Years<br>$200</div>
+  <div class="grid">
+    <div class="card">3 Months<br>$25</div>
+    <div class="card">6 Months<br>$45</div>
+    <div class="card">1 Year<br>$80</div>
+    <div class="card">2 Years<br>$140</div>
+    <div class="card">3 Years<br>$200</div>
   </div>
 </div>
 
-<!-- PAYMENT METHODS -->
+<!-- PAYMENT -->
 <div class="box">
   <h2>💳 Payment Methods</h2>
+  <p>✔ PayPal Available</p>
+  <p>✔ Bank Transfer Available</p>
+  <p>✔ Other methods available</p>
 
-  <p>✔ PayPal (Secure Instant Payment)</p>
-  <p>✔ Bank Transfer</p>
-  <p>✔ Wise / Online Transfer</p>
+  <p style="color:#22c55e;">
+    Details & setup instructions available on WhatsApp
+  </p>
 
-  <p><b>PayPal Email:</b> your-paypal@email.com</p>
-  <p><b>Bank:</b> Ask on WhatsApp for details</p>
+  <a class="btn" href="https://wa.me/61422116424?text=I want payment details">Get Payment Info</a>
 </div>
 
-<!-- FAQ -->
-<div class="box faq">
-  <h2>❓ Frequently Asked Questions</h2>
-
-  <h3>1. What devices are supported?</h3>
-  <p>Firestick, Android TV, Smart TV, iPhone, iPad, PC & MAG boxes.</p>
-
-  <h3>2. Do you provide free trial?</h3>
-  <p>Yes, we offer 24-hour free trial for testing quality.</p>
-
-  <h3>3. Is it HD / 4K quality?</h3>
-  <p>Yes, we provide HD, Full HD and 4K streams depending on channel.</p>
-
-  <h3>4. How fast do I get subscription?</h3>
-  <p>Instant activation after payment.</p>
-
-  <h3>5. Does it include sports & movies?</h3>
-  <p>Yes, includes sports, movies, series and live TV worldwide.</p>
-</div>
-
-<!-- ORDER -->
+<!-- CTA -->
 <div class="box" style="text-align:center;">
-  <h2>🚀 Ready to Start?</h2>
-
-  <a class="btn" href="https://wa.me/61422116424?text=I want IPTV subscription">
-    Order Now
-  </a>
+  <h2>🚀 Start Now</h2>
+  <a class="btn" href="https://wa.me/61422116424?text=I want IPTV subscription">Order Now</a>
 </div>
 
 </div>
+
+<!-- FLOAT WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/61422116424">💬</a>
 
 </body>
 </html>
