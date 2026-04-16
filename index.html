@@ -1,69 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Premium IPTV Experience</title>
+  <meta charset="UTF-8">
+  <title>Premium IPTV Subscription</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Premium IPTV service with live TV, sports, movies, UK & Australia channels and instant activation.">
+  <meta name="description" content="Premium IPTV service with live TV, sports, movies, UK & Australia channels and free trial.">
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
   <style>
-    body{
-      margin:0;
-      font-family:Roboto;
-      background:#0b1220;
-      color:white;
-    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Roboto;}
+    body{background:#0b1220;color:#fff;overflow-x:hidden;}
 
     /* HERO */
     .hero{
-      height:400px;
-      background:url('https://images.unsplash.com/photo-1593784991095-a205069470b6') center/cover;
+      height:100vh;
+      background:url('https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37') center/cover;
+      position:relative;
       display:flex;
       align-items:center;
       justify-content:center;
       text-align:center;
-      position:relative;
     }
 
     .hero::after{
       content:"";
       position:absolute;
-      top:0;left:0;right:0;bottom:0;
-      background:rgba(0,0,0,0.6);
+      inset:0;
+      background:rgba(0,0,0,0.65);
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      animation:fadeIn 2s ease;
     }
 
     .hero h1{
-      position:relative;
-      font-size:42px;
+      font-size:50px;
       color:#22c55e;
+    }
+
+    .hero p{
+      margin-top:10px;
+      font-size:18px;
+      color:#ddd;
     }
 
     .btn{
       display:inline-block;
-      padding:12px 20px;
+      margin-top:20px;
+      padding:14px 24px;
       background:#25D366;
       color:white;
-      text-decoration:none;
       border-radius:8px;
-      margin-top:10px;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s;
     }
 
-    .container{
-      max-width:1100px;
-      margin:auto;
-      padding:20px;
-    }
+    .btn:hover{transform:scale(1.05);}
+
+    /* SECTIONS */
+    .container{max-width:1100px;margin:auto;padding:20px;}
 
     .section{
       background:#111827;
       margin:20px 0;
       padding:20px;
       border-radius:12px;
+      transition:0.3s;
     }
 
-    /* TV GRID */
+    .section:hover{transform:translateY(-5px);}
+
+    /* GRID */
     .grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -77,9 +89,7 @@
       transition:0.3s;
     }
 
-    .card:hover{
-      transform:scale(1.05);
-    }
+    .card:hover{transform:scale(1.05);}
 
     .card img{
       width:100%;
@@ -89,30 +99,24 @@
 
     .card p{
       padding:10px;
-      margin:0;
       text-align:center;
     }
 
-    /* CHANNEL LIST */
-    .channels{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-    }
-
+    /* CHANNEL TAGS */
+    .tags{display:flex;flex-wrap:wrap;gap:10px;}
     .tag{
       background:#22c55e;
       color:black;
-      padding:8px 12px;
+      padding:6px 12px;
       border-radius:20px;
-      font-size:14px;
+      font-size:13px;
     }
 
     /* FAQ */
     details{
       background:#1f2937;
-      padding:10px;
       margin:10px 0;
+      padding:10px;
       border-radius:8px;
     }
 
@@ -122,7 +126,7 @@
       color:#22c55e;
     }
 
-    /* FLOAT BUTTON */
+    /* FLOAT WHATSAPP */
     .float{
       position:fixed;
       bottom:20px;
@@ -130,7 +134,13 @@
       background:#25D366;
       padding:15px;
       border-radius:50%;
-      font-size:20px;
+      font-size:22px;
+      text-decoration:none;
+    }
+
+    @keyframes fadeIn{
+      from{opacity:0;transform:translateY(30px);}
+      to{opacity:1;transform:translateY(0);}
     }
 
   </style>
@@ -140,24 +150,23 @@
 
 <!-- HERO -->
 <div class="hero">
-  <div>
+  <div class="hero-content">
     <h1>Premium IPTV Experience</h1>
-    <a class="btn" href="https://wa.me/61422116424?text=I want IPTV details">Get Started</a>
+    <p>Live TV • Movies • Sports • UK & Australia Channels • HD / 4K Streaming</p>
+
+    <a class="btn" href="https://wa.me/61422116424?text=I want IPTV trial">
+      Start Free Trial
+    </a>
   </div>
 </div>
 
 <div class="container">
 
-<!-- PEOPLE WATCHING TV -->
+<!-- PEOPLE / TV -->
 <div class="section">
-  <h2>📺 People Enjoying IPTV</h2>
+  <h2>📺 Real IPTV Experience</h2>
 
   <div class="grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37">
-      <p>Family Entertainment</p>
-    </div>
-
     <div class="card">
       <img src="https://images.unsplash.com/photo-1526401485004-2aa6f3d1b18f">
       <p>Smart TV Streaming</p>
@@ -167,6 +176,11 @@
       <img src="https://images.unsplash.com/photo-1580894894513-541e068a3e2b">
       <p>HD Quality Viewing</p>
     </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420">
+      <p>Family Entertainment</p>
+    </div>
   </div>
 </div>
 
@@ -175,15 +189,17 @@
   <h2>🌍 Channels Available</h2>
 
   <h3>UK Channels</h3>
-  <div class="channels">
+  <div class="tags">
     <div class="tag">BBC One</div>
     <div class="tag">Sky Sports</div>
     <div class="tag">ITV</div>
     <div class="tag">BT Sports</div>
   </div>
 
+  <br>
+
   <h3>Australia Channels</h3>
-  <div class="channels">
+  <div class="tags">
     <div class="tag">ABC TV</div>
     <div class="tag">Fox Sports AU</div>
     <div class="tag">9Now</div>
@@ -193,7 +209,7 @@
 
 <!-- SPORTS -->
 <div class="section">
-  <h2>⚽ Sports & Events</h2>
+  <h2>⚽ Live Sports & Events</h2>
 
   <div class="grid">
     <div class="card">
@@ -216,7 +232,17 @@
 <!-- PRICING -->
 <div class="section">
   <h2>💰 Subscription Plans</h2>
-  <p>3 Months - $25 | 6 Months - $45 | 1 Year - $80</p>
+  <p>3 Months - $25 | 6 Months - $45 | 1 Year - $80 | 2 Years - $140</p>
+</div>
+
+<!-- TRIAL -->
+<div class="section">
+  <h2>🎁 Free Trial</h2>
+  <p>Test our service before buying — 24 Hours Free Trial available.</p>
+
+  <a class="btn" href="https://wa.me/61422116424?text=I want free IPTV trial">
+    Get Free Trial
+  </a>
 </div>
 
 <!-- FAQ -->
@@ -229,13 +255,13 @@
   </details>
 
   <details>
-    <summary>Do you offer free trial?</summary>
-    <p>Yes, 24 hours free trial is available.</p>
+    <summary>Is sports included?</summary>
+    <p>Yes, all live sports & PPV events are included.</p>
   </details>
 
   <details>
-    <summary>Is sports included?</summary>
-    <p>Yes, all major sports & PPV events are included.</p>
+    <summary>Do you offer free trial?</summary>
+    <p>Yes, 24-hour free trial is available.</p>
   </details>
 
   <details>
@@ -246,13 +272,15 @@
 
 <!-- CTA -->
 <div class="section" style="text-align:center;">
-  <h2>🚀 Start Watching Today</h2>
-  <a class="btn" href="https://wa.me/61422116424?text=I want IPTV subscription">Order Now</a>
+  <h2>🚀 Ready to Start?</h2>
+  <a class="btn" href="https://wa.me/61422116424?text=I want IPTV subscription">
+    Order Now
+  </a>
 </div>
 
 </div>
 
-<!-- FLOAT -->
+<!-- WHATSAPP FLOAT -->
 <a class="float" href="https://wa.me/61422116424">💬</a>
 
 </body>
