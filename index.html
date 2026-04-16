@@ -1,127 +1,129 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Premium IPTV Service</title>
+  <title>Premium IPTV Experience</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Premium IPTV service with live TV, movies, sports and 24/7 support. Free trial available.">
-  <meta name="keywords" content="IPTV, IPTV subscription, live TV, sports IPTV, movies IPTV">
+  <meta name="description" content="Premium IPTV service with live TV, sports, movies, UK & Australia channels and instant activation.">
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
   <style>
-    body {
+    body{
       margin:0;
       font-family:Roboto;
       background:#0b1220;
       color:white;
-      overflow-x:hidden;
     }
 
-    /* HEADER */
-    .header {
+    /* HERO */
+    .hero{
+      height:400px;
+      background:url('https://images.unsplash.com/photo-1593784991095-a205069470b6') center/cover;
       display:flex;
-      justify-content:space-between;
       align-items:center;
-      padding:15px 20px;
-      background:#111827;
-      position:sticky;
-      top:0;
-    }
-
-    .logo {
-      font-size:20px;
-      font-weight:bold;
-      color:#22c55e;
-    }
-
-    /* SLIDER */
-    .slider {
-      height:300px;
-      position:relative;
-      overflow:hidden;
-    }
-
-    .slide {
-      position:absolute;
-      width:100%;
-      height:100%;
-      background-size:cover;
-      background-position:center;
-      animation:fade 12s infinite;
-    }
-
-    .slide:nth-child(1){background-image:url('https://images.unsplash.com/photo-1526401485004-2aa6f3d1b18f');}
-    .slide:nth-child(2){background-image:url('https://images.unsplash.com/photo-1580894894513-541e068a3e2b');animation-delay:4s;}
-    .slide:nth-child(3){background-image:url('https://images.unsplash.com/photo-1511512578047-dfb367046420');animation-delay:8s;}
-
-    @keyframes fade {
-      0%{opacity:0}
-      10%{opacity:1}
-      30%{opacity:1}
-      40%{opacity:0}
-      100%{opacity:0}
-    }
-
-    /* CONTAINER */
-    .container {
-      max-width:1000px;
-      margin:auto;
-      padding:20px;
-    }
-
-    h1 {
+      justify-content:center;
       text-align:center;
+      position:relative;
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      top:0;left:0;right:0;bottom:0;
+      background:rgba(0,0,0,0.6);
+    }
+
+    .hero h1{
+      position:relative;
+      font-size:42px;
       color:#22c55e;
-      font-size:40px;
     }
 
-    .box {
-      background:#111827;
-      padding:20px;
-      margin:15px 0;
-      border-radius:12px;
-      transition:0.3s;
-    }
-
-    .box:hover {
-      transform:scale(1.02);
-    }
-
-    .btn {
+    .btn{
       display:inline-block;
       padding:12px 20px;
       background:#25D366;
       color:white;
       text-decoration:none;
       border-radius:8px;
-      font-weight:bold;
       margin-top:10px;
     }
 
-    .grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-      gap:10px;
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:20px;
     }
 
-    .card {
+    .section{
+      background:#111827;
+      margin:20px 0;
+      padding:20px;
+      border-radius:12px;
+    }
+
+    /* TV GRID */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:15px;
+    }
+
+    .card{
       background:#1f2937;
-      padding:15px;
       border-radius:10px;
-      text-align:center;
+      overflow:hidden;
       transition:0.3s;
     }
 
-    .card:hover {
-      background:#22c55e;
-      color:black;
-      transform:translateY(-5px);
+    .card:hover{
+      transform:scale(1.05);
     }
 
-    /* WHATSAPP FLOAT */
-    .whatsapp {
+    .card img{
+      width:100%;
+      height:150px;
+      object-fit:cover;
+    }
+
+    .card p{
+      padding:10px;
+      margin:0;
+      text-align:center;
+    }
+
+    /* CHANNEL LIST */
+    .channels{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .tag{
+      background:#22c55e;
+      color:black;
+      padding:8px 12px;
+      border-radius:20px;
+      font-size:14px;
+    }
+
+    /* FAQ */
+    details{
+      background:#1f2937;
+      padding:10px;
+      margin:10px 0;
+      border-radius:8px;
+    }
+
+    summary{
+      cursor:pointer;
+      font-weight:bold;
+      color:#22c55e;
+    }
+
+    /* FLOAT BUTTON */
+    .float{
       position:fixed;
       bottom:20px;
       right:20px;
@@ -136,85 +138,122 @@
 
 <body>
 
-<!-- HEADER -->
-<div class="header">
-  <div class="logo">IPTV PRO</div>
-  <a class="btn" href="https://wa.me/61422116424?text=I want IPTV details">Contact</a>
-</div>
-
-<!-- SLIDER -->
-<div class="slider">
-  <div class="slide"></div>
-  <div class="slide"></div>
-  <div class="slide"></div>
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <h1>Premium IPTV Experience</h1>
+    <a class="btn" href="https://wa.me/61422116424?text=I want IPTV details">Get Started</a>
+  </div>
 </div>
 
 <div class="container">
 
-<h1>Premium IPTV Service</h1>
-
-<!-- HERO -->
-<div class="box">
-  <p>
-    High-quality IPTV service for Firestick, Smart TV, Android, iOS & more.
-    Enjoy stable servers, HD/4K streaming and instant activation.
-  </p>
-</div>
-
-<!-- FREE TRIAL -->
-<div class="box">
-  <h2>🎁 Free Trial</h2>
-  <p>24 Hours Free Trial available before purchase.</p>
-  <a class="btn" href="https://wa.me/61422116424?text=I want free trial">Get Trial</a>
-</div>
-
-<!-- FEATURES -->
-<div class="box">
-  <h2>🔥 Features</h2>
-  <p>✔ Live TV Worldwide</p>
-  <p>✔ Movies & Series</p>
-  <p>✔ Sports & PPV Events</p>
-  <p>✔ Multi-device support</p>
-  <p>✔ HD / 4K quality</p>
-</div>
-
-<!-- PRICING -->
-<div class="box">
-  <h2>💰 Pricing</h2>
+<!-- PEOPLE WATCHING TV -->
+<div class="section">
+  <h2>📺 People Enjoying IPTV</h2>
 
   <div class="grid">
-    <div class="card">3 Months<br>$25</div>
-    <div class="card">6 Months<br>$45</div>
-    <div class="card">1 Year<br>$80</div>
-    <div class="card">2 Years<br>$140</div>
-    <div class="card">3 Years<br>$200</div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37">
+      <p>Family Entertainment</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1526401485004-2aa6f3d1b18f">
+      <p>Smart TV Streaming</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1580894894513-541e068a3e2b">
+      <p>HD Quality Viewing</p>
+    </div>
   </div>
 </div>
 
-<!-- PAYMENT -->
-<div class="box">
-  <h2>💳 Payment Methods</h2>
-  <p>✔ PayPal Available</p>
-  <p>✔ Bank Transfer Available</p>
-  <p>✔ Other methods available</p>
+<!-- CHANNELS -->
+<div class="section">
+  <h2>🌍 Channels Available</h2>
 
-  <p style="color:#22c55e;">
-    Details & setup instructions available on WhatsApp
-  </p>
+  <h3>UK Channels</h3>
+  <div class="channels">
+    <div class="tag">BBC One</div>
+    <div class="tag">Sky Sports</div>
+    <div class="tag">ITV</div>
+    <div class="tag">BT Sports</div>
+  </div>
 
-  <a class="btn" href="https://wa.me/61422116424?text=I want payment details">Get Payment Info</a>
+  <h3>Australia Channels</h3>
+  <div class="channels">
+    <div class="tag">ABC TV</div>
+    <div class="tag">Fox Sports AU</div>
+    <div class="tag">9Now</div>
+    <div class="tag">SBS</div>
+  </div>
+</div>
+
+<!-- SPORTS -->
+<div class="section">
+  <h2>⚽ Sports & Events</h2>
+
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2">
+      <p>Live Football Matches</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1505842465776-3b4953ca4f7e">
+      <p>Championship Events</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b">
+      <p>PPV Sports</p>
+    </div>
+  </div>
+</div>
+
+<!-- PRICING -->
+<div class="section">
+  <h2>💰 Subscription Plans</h2>
+  <p>3 Months - $25 | 6 Months - $45 | 1 Year - $80</p>
+</div>
+
+<!-- FAQ -->
+<div class="section">
+  <h2>❓ Frequently Asked Questions</h2>
+
+  <details>
+    <summary>What devices are supported?</summary>
+    <p>Smart TV, Firestick, Android, iOS, PC and more.</p>
+  </details>
+
+  <details>
+    <summary>Do you offer free trial?</summary>
+    <p>Yes, 24 hours free trial is available.</p>
+  </details>
+
+  <details>
+    <summary>Is sports included?</summary>
+    <p>Yes, all major sports & PPV events are included.</p>
+  </details>
+
+  <details>
+    <summary>How do I get subscription?</summary>
+    <p>Contact us on WhatsApp for instant setup.</p>
+  </details>
 </div>
 
 <!-- CTA -->
-<div class="box" style="text-align:center;">
-  <h2>🚀 Start Now</h2>
+<div class="section" style="text-align:center;">
+  <h2>🚀 Start Watching Today</h2>
   <a class="btn" href="https://wa.me/61422116424?text=I want IPTV subscription">Order Now</a>
 </div>
 
 </div>
 
-<!-- FLOAT WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/61422116424">💬</a>
+<!-- FLOAT -->
+<a class="float" href="https://wa.me/61422116424">💬</a>
 
 </body>
 </html>
