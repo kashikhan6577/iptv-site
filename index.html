@@ -8,28 +8,9 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #0f172a, #1e293b);
+      font-family: Arial;
+      background: #0f172a;
       color: white;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
-      background: #0b1220;
-    }
-
-    h1 {
-      color: #22c55e;
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      color: #cbd5e1;
-      max-width: 700px;
-      margin: auto;
-      line-height: 1.6;
     }
 
     .container {
@@ -38,107 +19,135 @@
       padding: 20px;
     }
 
+    h1 { color: #22c55e; text-align:center; }
+
     .box {
       background: #111827;
       padding: 20px;
-      margin: 15px 0;
       border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    }
-
-    .price-box {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 15px;
-    }
-
-    .price {
-      background: #1f2937;
-      padding: 15px;
-      border-radius: 10px;
-      text-align: center;
-      font-weight: bold;
+      margin: 15px 0;
     }
 
     .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 30px;
-      background: #22c55e;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 18px;
+      display:inline-block;
+      padding:12px 20px;
+      background:#22c55e;
+      color:white;
+      text-decoration:none;
+      border-radius:8px;
+      margin-top:10px;
     }
 
-    .btn:hover {
-      background: #16a34a;
+    .price-grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+      gap:10px;
     }
 
-    .features p {
-      margin: 8px 0;
-      color: #e2e8f0;
+    .price {
+      background:#1f2937;
+      padding:15px;
+      border-radius:10px;
+      text-align:center;
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #94a3b8;
-      font-size: 14px;
-    }
+    .faq h3 { color:#22c55e; }
   </style>
 </head>
 
 <body>
 
-<div class="hero">
-  <h1>Premium IPTV Service</h1>
+<div class="container">
+
+<h1>Premium IPTV Subscription</h1>
+
+<!-- HERO -->
+<div class="box">
   <p>
-    Enjoy high-quality streaming on Fire Stick, Smart TV, Android, iPhone, iPad and more.
-    Stable servers, smooth playback and huge content library.
+    Premium IPTV service for Firestick, Smart TV, Android, iOS & more.
+    Enjoy worldwide entertainment in HD & 4K.
   </p>
 
-  <a class="btn" href="https://wa.me/61422116424?text=Hello, I want IPTV subscription">
+  <a class="btn" href="https://wa.me/61422116424?text=I want IPTV subscription">
     Contact on WhatsApp
   </a>
 </div>
 
-<div class="container">
-
-  <div class="box features">
-    <h2>Features</h2>
-    <p>✔️ Live TV Channels (Worldwide)</p>
-    <p>✔️ Movies & Series Library</p>
-    <p>✔️ Sports & Football Events</p>
-    <p>✔️ Pay-Per-View Events</p>
-    <p>✔️ Multi-device Support</p>
-    <p>✔️ HD / Full HD Quality</p>
-  </div>
-
-  <div class="box">
-    <h2>Pricing Plans</h2>
-
-    <div class="price-box">
-      <div class="price">3 Months<br>$25</div>
-      <div class="price">6 Months<br>$45</div>
-      <div class="price">1 Year<br>$80</div>
-      <div class="price">2 Years<br>$140</div>
-      <div class="price">3 Years<br>$200</div>
-    </div>
-  </div>
-
-  <div class="box" style="text-align:center;">
-    <h2>Ready to Start?</h2>
-    <a class="btn" href="https://wa.me/61422116424?text=I want to order IPTV subscription">
-      Order Now
-    </a>
-  </div>
-
+<!-- TRIAL SECTION -->
+<div class="box">
+  <h2>🎁 Free Trial</h2>
+  <p>We offer a <b>24 Hours Free Trial</b> so you can test quality before buying.</p>
+  <a class="btn" href="https://wa.me/61422116424?text=I want free IPTV trial">
+    Get Free Trial
+  </a>
 </div>
 
-<footer>
-  © 2026 Premium IPTV Service. All rights reserved.
-</footer>
+<!-- FEATURES -->
+<div class="box">
+  <h2>🔥 Features</h2>
+  <p>✔ Live TV Channels Worldwide</p>
+  <p>✔ Movies & Series Library</p>
+  <p>✔ Sports & Football Events</p>
+  <p>✔ PPV Events</p>
+  <p>✔ Multi Device Support</p>
+  <p>✔ HD / 4K Quality</p>
+</div>
+
+<!-- PRICING -->
+<div class="box">
+  <h2>💰 Pricing Plans</h2>
+
+  <div class="price-grid">
+    <div class="price">3 Months<br>$25</div>
+    <div class="price">6 Months<br>$45</div>
+    <div class="price">1 Year<br>$80</div>
+    <div class="price">2 Years<br>$140</div>
+    <div class="price">3 Years<br>$200</div>
+  </div>
+</div>
+
+<!-- PAYMENT METHODS -->
+<div class="box">
+  <h2>💳 Payment Methods</h2>
+
+  <p>✔ PayPal (Secure Instant Payment)</p>
+  <p>✔ Bank Transfer</p>
+  <p>✔ Wise / Online Transfer</p>
+
+  <p><b>PayPal Email:</b> your-paypal@email.com</p>
+  <p><b>Bank:</b> Ask on WhatsApp for details</p>
+</div>
+
+<!-- FAQ -->
+<div class="box faq">
+  <h2>❓ Frequently Asked Questions</h2>
+
+  <h3>1. What devices are supported?</h3>
+  <p>Firestick, Android TV, Smart TV, iPhone, iPad, PC & MAG boxes.</p>
+
+  <h3>2. Do you provide free trial?</h3>
+  <p>Yes, we offer 24-hour free trial for testing quality.</p>
+
+  <h3>3. Is it HD / 4K quality?</h3>
+  <p>Yes, we provide HD, Full HD and 4K streams depending on channel.</p>
+
+  <h3>4. How fast do I get subscription?</h3>
+  <p>Instant activation after payment.</p>
+
+  <h3>5. Does it include sports & movies?</h3>
+  <p>Yes, includes sports, movies, series and live TV worldwide.</p>
+</div>
+
+<!-- ORDER -->
+<div class="box" style="text-align:center;">
+  <h2>🚀 Ready to Start?</h2>
+
+  <a class="btn" href="https://wa.me/61422116424?text=I want IPTV subscription">
+    Order Now
+  </a>
+</div>
+
+</div>
 
 </body>
 </html>
