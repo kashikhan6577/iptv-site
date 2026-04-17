@@ -2,259 +2,190 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SkyGlass IPTV</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Premium IPTV streaming service UK, Australia & Europe">
-
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-body{
-  margin:0;
-  font-family:Roboto;
-  background:black;
-  color:white;
-  overflow-x:hidden;
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #000;
+  color: #fff;
 }
 
-/* VIDEO BACKGROUND */
-#bgVideo{
-  position:fixed;
-  right:0;
-  bottom:0;
-  min-width:100%;
-  min-height:100%;
-  z-index:-1;
-  object-fit:cover;
-  filter:brightness(35%);
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  position: absolute;
+  width: 100%;
 }
 
-/* HEADER */
-.header{
-  display:flex;
-  justify-content:space-between;
-  padding:15px 20px;
-  position:fixed;
-  width:100%;
-  top:0;
-  background:rgba(0,0,0,0.6);
-  backdrop-filter:blur(10px);
+.logo {
+  font-size: 28px;
+  color: #00c3ff;
+  font-weight: 700;
 }
 
-.logo{
-  color:#22c55e;
-  font-size:22px;
-  font-weight:bold;
+.btn {
+  background: #00c3ff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #000;
+  text-decoration: none;
 }
 
 /* HERO */
-.hero{
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1524985069026-dd778a71c7b4') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.hero h1{
-  font-size:55px;
-  color:#22c55e;
-  animation:fadeIn 2s ease;
+.hero h1 {
+  font-size: 60px;
 }
 
-.hero p{
-  font-size:18px;
-  color:#ddd;
+.hero p {
+  font-size: 20px;
+  margin: 20px 0;
 }
 
-.btn{
-  display:inline-block;
-  margin-top:20px;
-  padding:14px 25px;
-  background:#25D366;
-  color:white;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:bold;
-  transition:0.3s;
+/* FEATURES */
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
 }
 
-.btn:hover{
-  transform:scale(1.05);
-}
-
-/* SECTIONS */
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:40px 20px;
-}
-
-.section{
-  background:rgba(255,255,255,0.05);
-  margin:20px 0;
-  padding:20px;
-  border-radius:12px;
-  backdrop-filter:blur(5px);
-  transition:0.3s;
-}
-
-.section:hover{
-  transform:translateY(-5px);
-}
-
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:15px;
-}
-
-.card{
-  background:#111827;
-  border-radius:10px;
-  overflow:hidden;
-  transition:0.3s;
-}
-
-.card:hover{
-  transform:scale(1.05);
-}
-
-.card img{
-  width:100%;
-  height:150px;
-  object-fit:cover;
-}
-
-.card p{
-  text-align:center;
-  padding:10px;
+.feature {
+  max-width: 300px;
+  text-align: center;
 }
 
 /* COUNTER */
-.counter{
-  font-size:30px;
-  color:#22c55e;
-  text-align:center;
+.counter {
+  display: flex;
+  justify-content: space-around;
+  background: #111;
+  padding: 50px;
 }
 
-/* FLOAT BUTTON */
-.float{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  padding:15px;
-  border-radius:50%;
-  font-size:22px;
-  text-decoration:none;
+.counter div {
+  font-size: 30px;
 }
 
-/* ANIMATION */
-@keyframes fadeIn{
-  from{opacity:0;transform:translateY(30px);}
-  to{opacity:1;transform:translateY(0);}
+/* PRICING */
+.pricing {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px;
 }
 
+.card {
+  background: #111;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card h2 {
+  color: #00c3ff;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+}
 </style>
-</head>
 
+</head>
 <body>
 
-<!-- VIDEO BACKGROUND -->
-<video autoplay muted loop id="bgVideo">
-  <source src="https://cdn.coverr.co/videos/coverr-tv-static-1561/1080p.mp4" type="video/mp4">
-</video>
-
-<!-- HEADER -->
-<div class="header">
-  <div class="logo">SKYGLASS IPTV</div>
-  <a class="btn" href="https://wa.me/61422116424">Contact</a>
-</div>
+<!-- NAV -->
+<nav>
+  <div class="logo">SkyGlass IPTV</div>
+  <a href="#" class="btn">Buy Now</a>
+</nav>
 
 <!-- HERO -->
-<div class="hero">
+<section class="hero">
   <div>
-    <h1>Unlimited IPTV Experience</h1>
-    <p>Live TV • Sports • Movies • UK & Australia Channels</p>
-    <a class="btn" href="https://wa.me/61422116424?text=I want IPTV trial">Start Free Trial</a>
+    <h1>Unlimited IPTV Streaming</h1>
+    <p>Watch 20,000+ Channels in HD & 4K</p>
+    <a href="#" class="btn">Start Now</a>
   </div>
-</div>
-
-<div class="container">
-
-<!-- COUNTER -->
-<div class="section">
-  <h2 class="counter"><span id="users">0</span>+ Happy Users</h2>
-</div>
+</section>
 
 <!-- FEATURES -->
-<div class="section">
-  <h2>🔥 Features</h2>
-  <p>✔ Live TV Worldwide</p>
-  <p>✔ Sports & PPV Events</p>
-  <p>✔ Movies & Series</p>
-  <p>✔ HD / 4K Quality</p>
-  <p>✔ Multi Device Support</p>
-</div>
-
-<!-- CHANNELS -->
-<div class="section">
-  <h2>🌍 Channels</h2>
-
-  <h3>UK</h3>
-  <p>BBC • Sky Sports • ITV • BT Sports</p>
-
-  <h3>Australia</h3>
-  <p>ABC • Fox Sports • SBS • 9Now</p>
-</div>
-
-<!-- SPORTS -->
-<div class="section">
-  <h2>⚽ Live Sports</h2>
-
-  <div class="grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2">
-      <p>Football Matches</p>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b">
-      <p>PPV Events</p>
-    </div>
+<section class="features">
+  <div class="feature">
+    <h3>📺 20K+ Channels</h3>
+    <p>All UK, USA & Sports Channels</p>
   </div>
-</div>
+  <div class="feature">
+    <h3>⚡ Fast Servers</h3>
+    <p>No buffering experience</p>
+  </div>
+  <div class="feature">
+    <h3>💳 Easy Payment</h3>
+    <p>PayPal & Card supported</p>
+  </div>
+</section>
+
+<!-- COUNTER -->
+<section class="counter">
+  <div><span id="users">0</span>+ Users</div>
+  <div><span id="channels">0</span> Channels</div>
+  <div><span id="countries">0</span> Countries</div>
+</section>
 
 <!-- PRICING -->
-<div class="section">
-  <h2>💰 Plans</h2>
-  <p>3 Months - $25 | 6 Months - $45 | 1 Year - $80</p>
-</div>
+<section class="pricing">
+  <div class="card">
+    <h2>1 Month</h2>
+    <p>$10</p>
+    <a href="#" class="btn">Buy</a>
+  </div>
+  <div class="card">
+    <h2>3 Months</h2>
+    <p>$25</p>
+    <a href="#" class="btn">Buy</a>
+  </div>
+  <div class="card">
+    <h2>12 Months</h2>
+    <p>$70</p>
+    <a href="#" class="btn">Buy</a>
+  </div>
+</section>
 
-<!-- CTA -->
-<div class="section" style="text-align:center;">
-  <h2>🚀 Ready to Start?</h2>
-  <a class="btn" href="https://wa.me/61422116424?text=I want IPTV subscription">Order Now</a>
-</div>
+<footer>
+  <p>© 2026 SkyGlass IPTV</p>
+</footer>
 
-</div>
-
-<!-- FLOAT -->
-<a class="float" href="https://wa.me/61422116424">💬</a>
-
-<!-- COUNTER SCRIPT -->
 <script>
-let count = 0;
-let target = 10234;
+// COUNTER ANIMATION
+let count = (id, target) => {
+  let i = 0;
+  let interval = setInterval(() => {
+    if(i >= target) clearInterval(interval);
+    document.getElementById(id).innerText = i;
+    i += Math.ceil(target / 100);
+  }, 20);
+}
 
-let interval = setInterval(() => {
-  count++;
-  document.getElementById("users").innerText = count;
-  if(count >= target) clearInterval(interval);
-}, 1);
+count("users", 10000);
+count("channels", 20000);
+count("countries", 100);
 </script>
 
 </body>
