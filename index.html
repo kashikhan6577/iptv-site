@@ -8,185 +8,275 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #000;
-  color: #fff;
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#0a0a0a;
+color:#fff;
+overflow-x:hidden;
 }
 
-/* NAVBAR */
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 50px;
-  position: absolute;
-  width: 100%;
+/* NAV */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+position:fixed;
+width:100%;
+top:0;
+background:rgba(0,0,0,0.6);
+backdrop-filter: blur(10px);
+z-index:1000;
 }
 
-.logo {
-  font-size: 28px;
-  color: #00c3ff;
-  font-weight: 700;
+.logo{
+font-size:26px;
+font-weight:700;
+color:#00d4ff;
 }
 
-.btn {
-  background: #00c3ff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  color: #000;
-  text-decoration: none;
+.btn{
+background:linear-gradient(45deg,#00d4ff,#0077ff);
+padding:12px 22px;
+border-radius:30px;
+color:#fff;
+text-decoration:none;
+transition:0.3s;
+box-shadow:0 0 15px rgba(0,212,255,0.3);
+}
+
+.btn:hover{
+transform:scale(1.1);
 }
 
 /* HERO */
-.hero {
-  height: 100vh;
-  background: url('https://images.unsplash.com/photo-1524985069026-dd778a71c7b4') center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:url('https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?auto=format&fit=crop&w=1600&q=80') center/cover;
+position:relative;
 }
 
-.hero h1 {
-  font-size: 60px;
+.hero::after{
+content:'';
+position:absolute;
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,0.6);
 }
 
-.hero p {
-  font-size: 20px;
-  margin: 20px 0;
+.hero-content{
+position:relative;
+z-index:1;
+animation:fadeUp 1s ease;
+}
+
+.hero h1{
+font-size:55px;
+}
+
+.hero p{
+font-size:18px;
+margin:15px 0;
+color:#ccc;
 }
 
 /* FEATURES */
-.features {
-  display: flex;
-  justify-content: space-around;
-  padding: 50px;
+.features{
+display:flex;
+justify-content:center;
+gap:30px;
+padding:80px 20px;
+flex-wrap:wrap;
 }
 
-.feature {
-  max-width: 300px;
-  text-align: center;
+.feature{
+background:#141414;
+padding:30px;
+border-radius:15px;
+width:280px;
+text-align:center;
+transition:0.3s;
+}
+
+.feature:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 25px rgba(0,212,255,0.2);
 }
 
 /* COUNTER */
-.counter {
-  display: flex;
-  justify-content: space-around;
-  background: #111;
-  padding: 50px;
+.counter{
+display:flex;
+justify-content:center;
+gap:80px;
+padding:60px;
+background:#111;
+text-align:center;
 }
 
-.counter div {
-  font-size: 30px;
+.counter div{
+font-size:28px;
+color:#00d4ff;
 }
 
 /* PRICING */
-.pricing {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 50px;
+.pricing{
+display:flex;
+justify-content:center;
+gap:25px;
+padding:80px 20px;
+flex-wrap:wrap;
 }
 
-.card {
-  background: #111;
-  padding: 30px;
-  border-radius: 10px;
-  text-align: center;
+.card{
+background:#151515;
+padding:30px;
+border-radius:15px;
+width:250px;
+text-align:center;
+transition:0.3s;
 }
 
-.card h2 {
-  color: #00c3ff;
+.card:hover{
+transform:scale(1.05);
+border:1px solid #00d4ff;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:15px;
+border-radius:50%;
+box-shadow:0 0 15px rgba(0,0,0,0.3);
+z-index:1000;
+animation:bounce 2s infinite;
+}
+
+.whatsapp img{
+width:30px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(40px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
 }
 
 /* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #000;
+footer{
+text-align:center;
+padding:20px;
+background:#000;
+color:#777;
 }
-</style>
 
+</style>
 </head>
+
 <body>
 
 <!-- NAV -->
 <nav>
-  <div class="logo">SkyGlass IPTV</div>
-  <a href="#" class="btn">Buy Now</a>
+<div class="logo">SkyGlass IPTV</div>
+<a href="https://wa.me/923000000000" class="btn">WhatsApp</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div>
-    <h1>Unlimited IPTV Streaming</h1>
-    <p>Watch 20,000+ Channels in HD & 4K</p>
-    <a href="#" class="btn">Start Now</a>
-  </div>
+<div class="hero-content">
+<h1>Unlimited IPTV Streaming</h1>
+<p>20,000+ Channels | Movies | Sports | HD & 4K</p>
+<a href="https://wa.me/923000000000" class="btn">Start on WhatsApp</a>
+</div>
 </section>
 
 <!-- FEATURES -->
 <section class="features">
-  <div class="feature">
-    <h3>📺 20K+ Channels</h3>
-    <p>All UK, USA & Sports Channels</p>
-  </div>
-  <div class="feature">
-    <h3>⚡ Fast Servers</h3>
-    <p>No buffering experience</p>
-  </div>
-  <div class="feature">
-    <h3>💳 Easy Payment</h3>
-    <p>PayPal & Card supported</p>
-  </div>
+<div class="feature">
+<h3>📺 20K+ Channels</h3>
+<p>All sports, UK, USA & live TV</p>
+</div>
+
+<div class="feature">
+<h3>⚡ Ultra Fast</h3>
+<p>No buffering, smooth playback</p>
+</div>
+
+<div class="feature">
+<h3>💳 Easy Payment</h3>
+<p>Card / WhatsApp direct deal</p>
+</div>
 </section>
 
 <!-- COUNTER -->
 <section class="counter">
-  <div><span id="users">0</span>+ Users</div>
-  <div><span id="channels">0</span> Channels</div>
-  <div><span id="countries">0</span> Countries</div>
+<div><span id="users">0</span><br>Users</div>
+<div><span id="channels">0</span><br>Channels</div>
+<div><span id="countries">0</span><br>Countries</div>
 </section>
 
 <!-- PRICING -->
 <section class="pricing">
-  <div class="card">
-    <h2>1 Month</h2>
-    <p>$10</p>
-    <a href="#" class="btn">Buy</a>
-  </div>
-  <div class="card">
-    <h2>3 Months</h2>
-    <p>$25</p>
-    <a href="#" class="btn">Buy</a>
-  </div>
-  <div class="card">
-    <h2>12 Months</h2>
-    <p>$70</p>
-    <a href="#" class="btn">Buy</a>
-  </div>
+
+<div class="card">
+<h2>1 Month</h2>
+<p>$10</p>
+<a href="https://wa.me/923000000000" class="btn">Buy</a>
+</div>
+
+<div class="card">
+<h2>3 Months</h2>
+<p>$25</p>
+<a href="https://wa.me/923000000000" class="btn">Buy</a>
+</div>
+
+<div class="card">
+<h2>12 Months</h2>
+<p>$70</p>
+<a href="https://wa.me/923000000000" class="btn">Buy</a>
+</div>
+
 </section>
 
+<!-- WHATSAPP FLOAT BUTTON -->
+<a href="https://wa.me/923000000000" class="whatsapp">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+</a>
+
 <footer>
-  <p>© 2026 SkyGlass IPTV</p>
+© 2026 SkyGlass IPTV | All Rights Reserved
 </footer>
 
 <script>
-// COUNTER ANIMATION
-let count = (id, target) => {
-  let i = 0;
-  let interval = setInterval(() => {
-    if(i >= target) clearInterval(interval);
-    document.getElementById(id).innerText = i;
-    i += Math.ceil(target / 100);
-  }, 20);
+// COUNTER
+function count(id,target){
+let i=0;
+let el=document.getElementById(id);
+let interval=setInterval(()=>{
+if(i>=target) clearInterval(interval);
+el.innerText=i;
+i+=Math.ceil(target/80);
+},20);
 }
 
-count("users", 10000);
-count("channels", 20000);
-count("countries", 100);
+count("users",10000);
+count("channels",20000);
+count("countries",120);
 </script>
 
 </body>
 </html>
+
